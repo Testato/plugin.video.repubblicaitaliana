@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.repubblicaitaliana" name="RepubblicaItaliana" version="0.1.0" provider-name="Testato">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="inputstream.adaptive"/>
+    <import addon="plugin.video.youtube"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">RepubblicaItaliana</summary>
+    <description lang="en_GB">Italian politics - TV and Radio channels</description>
+    <summary lang="it_IT">RepubblicaItaliana</summary>
+    <description lang="it_IT">Politica italiana - Canali TV e Radio</description>
+    <language>it</language>
+    <platform>all</platform>
+    <license>GNU General Public License v3.0</license>
+    <forum></forum>
+    <website></website>
+    <email>speednpower@gmail.com</email>
+    <source>https://github.com/Testato/RepubblicaItaliana</source>
+    <assets>
+        <icon>resources/icon.png</icon>
+        <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <news>0.1.0 (26 Aug 2019)
+- first version
+</news>
+  </extension>
+</addon>
