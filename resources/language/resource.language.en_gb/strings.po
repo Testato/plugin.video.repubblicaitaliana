@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: RivediLa7
-# Addon id: plugin.video.rivedila7
-# Addon Provider: Luivit, Testato
+# Addon Name: RepubblicaItaliana
+# Addon id: plugin.video.repubblicaitaliana
+# Addon Provider: Testato
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -25,7 +25,7 @@ msgid "Senato della Repubblica"
 msgstr ""
 
 msgctxt "#32003"
-msgid "Radio Radicale TV"
+msgid "TV"
 msgstr ""
 
 msgctxt "#32004"
