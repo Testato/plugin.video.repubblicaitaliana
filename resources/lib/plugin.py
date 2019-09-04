@@ -15,6 +15,7 @@ handle = int(sys.argv[1])
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'}
 titolo_global = ''
 fanart_path = os.path.join(xbmcaddon.Addon().getAddonInfo('path'), 'resources', 'fanart.jpg')
+thumb_path = os.path.join(xbmcaddon.Addon().getAddonInfo('path'), 'resources', 'media')
 
 
 
@@ -27,19 +28,19 @@ def parameters_string_to_dict(parameters):
 def show_root_menu():
     ''' Show the plugin root menu '''
     liStyle = xbmcgui.ListItem('[B]'+language(32001)+'[/B]')
-    liStyle.setArt({ 'thumb': 'https://www.camera.it/application/xmanager/projects/leg18/img/header/logo_camera.jpg', 'fanart' : fanart_path })
+    liStyle.setArt({ 'thumb': os.path.join(thumb_path, 'camera.jpg'), 'fanart' : fanart_path })
     addDirectoryItem_nodup({"mode": "camera"},liStyle)
 
     liStyle = xbmcgui.ListItem('[B]'+language(32002)+'[/B]')
-    liStyle.setArt({ 'thumb': 'https://www.senato.it/application/xmanager/projects/leg18/img/home2017/logo-senato-home.png', 'fanart' : fanart_path })
+    liStyle.setArt({ 'thumb': os.path.join(thumb_path, 'senato.png'), 'fanart' : fanart_path })
     addDirectoryItem_nodup({"mode": "senato"},liStyle)
 
     liStyle = xbmcgui.ListItem('[B]'+language(32003)+'[/B]')
-    liStyle.setArt({ 'thumb': 'https://media.cdnandroid.com/97/fe/ae/31/imagen-radio-radicale-tv-0big.jpg', 'fanart' : fanart_path })
-    addDirectoryItem_nodup({"mode": "radicaletv"},liStyle, folder=False)
+    liStyle.setArt({ 'thumb': os.path.join(thumb_path, 'tv.png'), 'fanart' : fanart_path })
+    addDirectoryItem_nodup({"mode": "tv"},liStyle)
 
     liStyle = xbmcgui.ListItem('[B]'+language(32004)+'[/B]')
-    liStyle.setArt({ 'thumb': 'http://www.appsgeyser.com/blog/wp-content/uploads/2016/12/social-radio-icon-3.png', 'fanart' : fanart_path })
+    liStyle.setArt({ 'thumb': os.path.join(thumb_path, 'radio.png'), 'fanart' : fanart_path })
     addDirectoryItem_nodup({"mode": "radio"},liStyle)
 
     xbmcplugin.endOfDirectory(handle=handle, succeeded=True)
@@ -130,13 +131,69 @@ def programmi_senato():
     xbmcplugin.endOfDirectory(handle=handle, succeeded=True)
 
 
+def programmi_tv():
+
+    titolo = 'RaiNews24'
+    liStyle = xbmcgui.ListItem(titolo)
+    link = 'https://rainews1-live.akamaized.net/hls/live/598326/rainews1/rainews1/playlist.m3u8'
+    thumb = 'http://www.rainews.it/dl/components/img/svg/RaiNewsBarra-logo.png'
+    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    liStyle.setInfo('video', {})
+    liStyle.setProperty('isPlayable', 'true')
+    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+
+    titolo = 'TgCom24'
+    liStyle = xbmcgui.ListItem(titolo)
+    #link = 'http://download.tsi.telecom-paristech.fr/gpac/DASH_CONFORMANCE/TelecomParisTech/mp4-live/mp4-live-mpd-AV-BS.mpd'
+    link = 'https://live3t-mediaset-it.akamaized.net/Content/dash_d0_clr_vos/live/channel(kf)/manifest.mpd?hdnts=st=1567612281~exp=1567626711~acl=/Content/dash_d0_clr_vos/live/channel(kf)*~hmac=f9ecab1cabe5ab64596ac87832b8ebaacb7bddf07e532577bf389bf31386c7ef'
+    thumb = 'https://www.mimesi.com/wp-content/uploads/2017/11/tgcom24.jpg'
+    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    liStyle.setInfo('video', {})
+    liStyle.setProperty('isPlayable', 'true')
+    liStyle.setProperty('inputstreamaddon', 'inputstream.adaptive')
+    liStyle.setProperty('inputstream.adaptive.manifest_type', 'mpd')
+    liStyle.setMimeType('application/dash+xml')
+    liStyle.setContentLookup(False)
+
+    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+    
+    titolo = 'SkyTg24'
+    liStyle = xbmcgui.ListItem(titolo)
+    link = 'https://skyanywhere3-i.akamaihd.net/hls/live/751544/tg24ta/playlist.m3u8?hdnea=st=1544092653~exp=1608028200~acl=/*~hmac=41be421676ef19322f2982b4e561fba1579a07d7d6cc3898088f6e1758bd9bd1'
+    thumb = 'https://pbs.twimg.com/profile_images/1144638925736218624/0Q08kh8-_400x400.png'
+    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    liStyle.setInfo('video', {})
+    liStyle.setProperty('isPlayable', 'true')
+    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+
+    titolo = 'La7'
+    liStyle = xbmcgui.ListItem(titolo)
+    link = 'https://stream.la7.it/out/v1/fe849af8150c4c51889b15dadc717774/index.m3u8'
+    thumb = 'https://www.la7.it/img/poster_diretta.jpg'
+    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    liStyle.setInfo('video', {})
+    liStyle.setProperty('isPlayable', 'true')
+    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+
+    titolo = 'Radio Radicale TV'
+    liStyle = xbmcgui.ListItem(titolo)
+    link = 'https://video.radioradicale.it/liverr/padtv2/playlist.m3u8'
+    thumb = 'https://media.cdnandroid.com/97/fe/ae/31/imagen-radio-radicale-tv-0big.jpg'
+    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    liStyle.setInfo('video', {})
+    liStyle.setProperty('isPlayable', 'true')
+    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+
+    xbmcplugin.endOfDirectory(handle=handle, succeeded=True)
+
+
 def programmi_radio():
     titolo = 'Rai GR Parlamento'
     liStyle = xbmcgui.ListItem(titolo)
     link = 'https://grparlamento1-lh.akamaihd.net/i/grparlamento1_1@586839/master.m3u8'
     thumb = 'http://db.radioline.fr/pictures/radio_994f2bf74254de17bb2c096c0cbf9e21/logo200.jpg'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
-    liStyle.setInfo('video', {})
+    liStyle.setInfo('music', {})
     liStyle.setProperty('isPlayable', 'true')
     xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
 
@@ -145,7 +202,7 @@ def programmi_radio():
     link = 'https://live.radioradicale.it/live.mp3'
     thumb = 'https://www.radioradicale.it/sites/all/themes/radioradicale_2014/images/audio-400.png'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
-    liStyle.setInfo('video', {})
+    liStyle.setInfo('music', {})
     liStyle.setProperty('isPlayable', 'true')
     xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
 
@@ -154,7 +211,7 @@ def programmi_radio():
     link = 'https://live.radioradicale.it/camera.mp3'
     thumb = 'https://www.radioradicale.it/sites/all/themes/radioradicale_2014/images/audio-400.png'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
-    liStyle.setInfo('video', {})
+    liStyle.setInfo('music', {})
     liStyle.setProperty('isPlayable', 'true')
     xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
 
@@ -163,7 +220,16 @@ def programmi_radio():
     link = 'https://live.radioradicale.it/senato.mp3'
     thumb = 'https://www.radioradicale.it/sites/all/themes/radioradicale_2014/images/audio-400.png'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
-    liStyle.setInfo('video', {})
+    liStyle.setInfo('music', {})
+    liStyle.setProperty('isPlayable', 'true')
+    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+
+    titolo = 'Radio Popolare'
+    liStyle = xbmcgui.ListItem(titolo)
+    link = 'https://livex.radiopopolare.it/radiopop'
+    thumb = 'https://www.radiopopolare.it/wp-content/themes/mir-rp/img/testata_logo_rp.png'
+    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    liStyle.setInfo('music', {})
     liStyle.setProperty('isPlayable', 'true')
     xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
 
@@ -190,9 +256,8 @@ if mode=="camera":
 elif mode=="senato":
     programmi_senato()
 
-elif mode=="radicaletv":
-    titolo_global=language(32003)
-    play_video('https://video.radioradicale.it/liverr/padtv2/playlist.m3u8',True)
+elif mode=="tv":
+    programmi_tv()
 
 elif mode=="radio":
     programmi_radio()
