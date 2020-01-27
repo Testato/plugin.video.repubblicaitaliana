@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.repubblicaitaliana" name="RepubblicaItaliana" version="0.3.0" provider-name="Testato">
+<addon id="plugin.video.repubblicaitaliana" name="RepubblicaItaliana" version="0.4.0" provider-name="Testato">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="inputstream.adaptive"/>
     <import addon="plugin.video.youtube"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -23,10 +24,10 @@
         <icon>resources/icon.png</icon>
         <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>0.3.0 (24 Sep 2019)
-- Removed inputstream.adaptive dependencies
-- Radio24 TV added
-- Radio24 added
+    <news>0.4.0 (27 Jan 2020)
+- TgCom24 re-added
+- reintroduced inputstream.adaptive for .mdp reproduction
+- some channels logo updated
 </news>
   </extension>
 </addon>

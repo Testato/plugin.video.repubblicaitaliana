@@ -8,7 +8,6 @@ import xbmcaddon
 import urllib
 import urlparse
 
-
 addon = xbmcaddon.Addon()
 language = addon.getLocalizedString
 handle = int(sys.argv[1])
@@ -63,7 +62,7 @@ def programmi_camera():
 
     titolo = 'Camera - Canale Satellitare'
     liStyle = xbmcgui.ListItem(titolo)
-    link = 'plugin://plugin.video.youtube/play/?video_id=WVjdPb7F4uY'
+    link = 'plugin://plugin.video.youtube/play/?video_id=Cnjs83yowUM'
     thumb = 'https://webtv.camera.it/assets/thumbs/flash_7/2019/EI_20190520_ch4_14419.jpg'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
     liStyle.setInfo('video', {})
@@ -124,6 +123,21 @@ def programmi_tv():
     liStyle.setProperty('isPlayable', 'true')
     xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
 
+    titolo = 'TgCom24'
+    liStyle = xbmcgui.ListItem(titolo)
+    #link = 'http://download.tsi.telecom-paristech.fr/gpac/DASH_CONFORMANCE/TelecomParisTech/mp4-live/mp4-live-mpd-AV-BS.mpd'
+    #link = 'https://live3t-mediaset-it.akamaized.net/Content/dash_d0_clr_vos/live/channel(kf)/manifest.mpd?hdnts=st=1567612281~exp=1567626711~acl=/Content/dash_d0_clr_vos/live/channel(kf)*~hmac=f9ecab1cabe5ab64596ac87832b8ebaacb7bddf07e532577bf389bf31386c7ef'
+    link = 'https://live3-mediaset-it.akamaized.net/Content/dash_d0_clr_vos/live/channel(kf)/manifest.mpd'
+    thumb = 'https://www.mimesi.com/wp-content/uploads/2017/11/tgcom24.jpg'
+    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    liStyle.setInfo('video', {})
+    liStyle.setProperty('isPlayable', 'true')
+    liStyle.setProperty('inputstreamaddon', 'inputstream.adaptive')
+    liStyle.setProperty('inputstream.adaptive.manifest_type', 'mpd')
+    liStyle.setMimeType('application/dash+xml')
+    liStyle.setContentLookup(False)
+    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+
     titolo = 'SkyTg24'
     liStyle = xbmcgui.ListItem(titolo)
     link = 'https://skyanywhere3-i.akamaihd.net/hls/live/751544/tg24ta/playlist.m3u8?hdnea=st=1544092653~exp=1608028200~acl=/*~hmac=41be421676ef19322f2982b4e561fba1579a07d7d6cc3898088f6e1758bd9bd1'
@@ -142,19 +156,19 @@ def programmi_tv():
     liStyle.setProperty('isPlayable', 'true')
     xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
 
-    titolo = 'La7'
-    liStyle = xbmcgui.ListItem(titolo)
-    link = 'https://stream.la7.it/out/v1/fe849af8150c4c51889b15dadc717774/index.m3u8'
-    thumb = 'https://www.la7.it/img/poster_diretta.jpg'
-    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
-    liStyle.setInfo('video', {})
-    liStyle.setProperty('isPlayable', 'true')
-    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+    # titolo = 'La7'
+    # liStyle = xbmcgui.ListItem(titolo)
+    # link = 'https://stream.la7.it/out/v1/fe849af8150c4c51889b15dadc717774/index.m3u8'
+    # thumb = 'https://www.la7.it/img/poster_diretta.jpg'
+    # liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    # liStyle.setInfo('video', {})
+    # liStyle.setProperty('isPlayable', 'true')
+    # xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
     
     titolo = 'Radio24 TV'
     liStyle = xbmcgui.ListItem(titolo)
     link = 'https://radio24-lh.akamaihd.net/i/radio24video_1@379914/master.m3u8'
-    thumb = 'http://www.radio24.ilsole24ore.com/images/logo-r24-new.png'
+    thumb = 'https://www.radio24.ilsole24ore.com/static/images/radio24_share_600x600.jpg'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
     liStyle.setInfo('video', {})
     liStyle.setProperty('isPlayable', 'true')
@@ -203,7 +217,7 @@ def programmi_radio():
     titolo = 'RadioPopolare'
     liStyle = xbmcgui.ListItem(titolo)
     link = 'https://livex.radiopopolare.it/radiopop'
-    thumb = 'https://www.radiopopolare.it/wp-content/themes/mir-rp/img/testata_logo_rp.png'
+    thumb = 'https://www.radiopopolare.it/wp-content/uploads/2019/08/icon-logo@2x-1.png'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
     liStyle.setInfo('music', {})
     liStyle.setProperty('isPlayable', 'true')
@@ -212,7 +226,7 @@ def programmi_radio():
     titolo = 'Radio24'
     liStyle = xbmcgui.ListItem(titolo)
     link = 'https://radio24-lh.akamaihd.net/i/radio24_1@99307/master.m3u8'
-    thumb = 'http://www.radio24.ilsole24ore.com/images/logo-r24-new.png'
+    thumb = 'https://www.radio24.ilsole24ore.com/static/images/radio24_share_600x600.jpg'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
     liStyle.setInfo('music', {})
     liStyle.setProperty('isPlayable', 'true')
