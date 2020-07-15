@@ -75,8 +75,8 @@ def programmi_camera():
 def programmi_senato():
     titolo = 'Senato - Web TV 1'
     liStyle = xbmcgui.ListItem(titolo)
-    link = 'http://senato-live.morescreens.com/senato-live/ngrp:webtv1_all/playlist.m3u8?DVR'
-    thumb = 'http://prd-static-senato.spectar.tv/rev-1544534780/uploads/1/video_thumbnails/upload_318_3763.png'
+    link = 'https://senato-live.morescreens.com/SENATO_1_001/playlist.m3u8?video_id=13440'
+    thumb = 'http://webtv.senato.it/application/xmanager/projects/leg18/img/webtv/logo_senatoTV.jpg'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
     liStyle.setInfo('video', {})
     liStyle.setProperty('isPlayable', 'true')
@@ -84,8 +84,8 @@ def programmi_senato():
 
     titolo = 'Senato - Web TV 2'
     liStyle = xbmcgui.ListItem(titolo)
-    link = 'http://senato-live.morescreens.com/senato-live/ngrp:webtv2_all/playlist.m3u8?DVR'
-    thumb = 'http://prd-static-senato.spectar.tv/rev-1544534780/uploads/1/video_thumbnails/upload_471_3766.png'
+    link = 'https://senato-live.morescreens.com/SENATO_1_002/playlist.m3u8?video_id=13459'
+    thumb = 'http://webtv.senato.it/application/xmanager/projects/leg18/img/webtv/logo_senatoTV.jpg'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
     liStyle.setInfo('video', {})
     liStyle.setProperty('isPlayable', 'true')
@@ -93,8 +93,8 @@ def programmi_senato():
 
     titolo = 'Senato - Web TV 3'
     liStyle = xbmcgui.ListItem(titolo)
-    link = 'http://senato-live.morescreens.com/senato-live/ngrp:webtv3_all/playlist.m3u8?DVR'
-    thumb = 'http://prd-static-senato.spectar.tv/rev-1544534780/uploads/1/video_thumbnails/upload_390_3769.png'
+    link = 'https://senato-live.morescreens.com/SENATO_1_003/playlist.m3u8?video_id=13462'
+    thumb = 'http://webtv.senato.it/application/xmanager/projects/leg18/img/webtv/logo_senatoTV.jpg'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
     liStyle.setInfo('video', {})
     liStyle.setProperty('isPlayable', 'true')
@@ -102,8 +102,35 @@ def programmi_senato():
 
     titolo = 'Senato - Web TV 4'
     liStyle = xbmcgui.ListItem(titolo)
-    link = 'http://senato-live.morescreens.com/senato-live/ngrp:webtv4_all/playlist.m3u8?DVR'
-    thumb = 'http://prd-static-senato.spectar.tv/rev-1544534780/uploads/1/video_thumbnails/upload_569_3772.png'
+    link = 'https://senato-live.morescreens.com/SENATO_1_004/playlist.m3u8?video_id=13465'
+    thumb = 'http://webtv.senato.it/application/xmanager/projects/leg18/img/webtv/logo_senatoTV.jpg'
+    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    liStyle.setInfo('video', {})
+    liStyle.setProperty('isPlayable', 'true')
+    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+
+    titolo = 'Senato - Web TV 5'
+    liStyle = xbmcgui.ListItem(titolo)
+    link = 'https://senato-live.morescreens.com/SENATO_1_005/playlist.m3u8?video_id=13466'
+    thumb = 'http://webtv.senato.it/application/xmanager/projects/leg18/img/webtv/logo_senatoTV.jpg'
+    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    liStyle.setInfo('video', {})
+    liStyle.setProperty('isPlayable', 'true')
+    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+
+    titolo = 'Senato - Web TV 6'
+    liStyle = xbmcgui.ListItem(titolo)
+    link = 'https://senato-live.morescreens.com/SENATO_1_006/playlist.m3u8?video_id=13469'
+    thumb = 'http://webtv.senato.it/application/xmanager/projects/leg18/img/webtv/logo_senatoTV.jpg'
+    liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
+    liStyle.setInfo('video', {})
+    liStyle.setProperty('isPlayable', 'true')
+    xbmcplugin.addDirectoryItem(handle=handle, url=link, listitem=liStyle, isFolder=False)
+
+    titolo = 'Senato - Web TV 7'
+    liStyle = xbmcgui.ListItem(titolo)
+    link = 'https://senato-live.morescreens.com/SENATO_1_007/playlist.m3u8?video_id=13472'
+    thumb = 'http://webtv.senato.it/application/xmanager/projects/leg18/img/webtv/logo_senatoTV.jpg'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
     liStyle.setInfo('video', {})
     liStyle.setProperty('isPlayable', 'true')

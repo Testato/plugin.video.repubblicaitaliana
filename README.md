@@ -3,6 +3,9 @@ Italian politics - TV and Radio channels
 
 
 ### Changelog
+0.5.0 (15 Jul 2020)
+- New Senato WebTV channels
+
 0.4.0 (27 Jan 2020)
 - TgCom24 re-added
 - reintroduced inputstream.adaptive for .mdp reproduction
