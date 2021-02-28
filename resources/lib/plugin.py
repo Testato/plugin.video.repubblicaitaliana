@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 import sys
 import xbmc
@@ -6,7 +5,7 @@ import xbmcgui
 import xbmcplugin
 import xbmcaddon
 import urllib
-import urlparse
+import urllib.parse
 
 addon = xbmcaddon.Addon()
 language = addon.getLocalizedString
@@ -19,7 +18,7 @@ thumb_path = os.path.join(xbmcaddon.Addon().getAddonInfo('path'), 'resources', '
 
 
 def parameters_string_to_dict(parameters):
-    paramDict = dict(urlparse.parse_qsl(parameters[1:]))
+    paramDict = dict(urllib.parse.parse_qsl(parameters[1:]))
     return paramDict
 
 
@@ -45,7 +44,7 @@ def show_root_menu():
 
 
 def addDirectoryItem_nodup(parameters, li, title=titolo_global, folder=True):
-    url = sys.argv[0] + '?' + urllib.urlencode(parameters, 'utf-8')
+    url = sys.argv[0] + '?' + urllib.parse.urlencode(parameters)
     #xbmc.log('LIST------: '+str(url),xbmc.LOGNOTICE)
     return xbmcplugin.addDirectoryItem(handle=handle, url=url, listitem=li, isFolder=folder)
 
@@ -159,7 +158,7 @@ def programmi_tv():
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
     liStyle.setInfo('video', {})
     liStyle.setProperty('isPlayable', 'true')
-    liStyle.setProperty('inputstreamaddon', 'inputstream.adaptive')
+    liStyle.setProperty('inputstream', 'inputstream.adaptive')
     liStyle.setProperty('inputstream.adaptive.manifest_type', 'mpd')
     liStyle.setMimeType('application/dash+xml')
     liStyle.setContentLookup(False)
@@ -167,7 +166,8 @@ def programmi_tv():
 
     titolo = 'SkyTg24'
     liStyle = xbmcgui.ListItem(titolo)
-    link = 'https://skyanywhere3-i.akamaihd.net/hls/live/751544/tg24ta/playlist.m3u8?hdnea=st=1544092653~exp=1608028200~acl=/*~hmac=41be421676ef19322f2982b4e561fba1579a07d7d6cc3898088f6e1758bd9bd1'
+    #link = 'https://skyanywhere3-i.akamaihd.net/hls/live/751544/tg24ta/playlist.m3u8?hdnea=st=1544092653~exp=1608028200~acl=/*~hmac=41be421676ef19322f2982b4e561fba1579a07d7d6cc3898088f6e1758bd9bd1'
+    link = 'https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/12221/web/master.m3u8?hdnea=st=1607532228~exp=1639564200~acl=/*~hmac=95d5dc1a73d45cff4b61cb3991e715d32150db9f77d2a478b89f9a52f6d6cbe9'
     thumb = 'https://pbs.twimg.com/profile_images/1144638925736218624/0Q08kh8-_400x400.png'
     liStyle.setArt({ 'thumb': thumb, 'fanart' : fanart_path })
     liStyle.setInfo('video', {})

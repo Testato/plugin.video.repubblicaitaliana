@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.repubblicaitaliana" name="RepubblicaItaliana" version="0.5.0" provider-name="Testato">
+<addon id="plugin.video.repubblicaitaliana" name="RepubblicaItaliana" version="1.0.0" provider-name="Testato">
   <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
     <import addon="inputstream.adaptive"/>
     <import addon="plugin.video.youtube"/>
   </requires>
@@ -15,8 +15,8 @@
     <description lang="it_IT">Politica italiana - Canali TV e Radio</description>
     <language>it</language>
     <platform>all</platform>
-    <license>GNU General Public License v3.0</license>
-    <forum></forum>
+    <license>GPL-3.0-only</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=360944</forum>
     <website></website>
     <email>speednpower@gmail.com</email>
     <source>https://github.com/Testato/RepubblicaItaliana</source>
@@ -24,8 +24,9 @@
         <icon>resources/icon.png</icon>
         <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>0.5.0 (15 Jul 2020)
-- New Senato WebTV channels
+    <news>1.0.0 (28 Feb 2021)
+      - Upgraded to Kodi19 Matrix
+      - Fixed SkyTg24
 </news>
   </extension>
 </addon>

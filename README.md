@@ -3,6 +3,10 @@ Italian politics - TV and Radio channels
 
 
 ### Changelog
+1.0.0 (28 Feb 2021)
+- Upgraded to Kodi19 Matrix
+- Fixed SkyTg24
+
 0.5.0 (15 Jul 2020)
 - New Senato WebTV channels
 
