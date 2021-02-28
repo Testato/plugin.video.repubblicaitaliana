@@ -2,8 +2,8 @@
 <addon id="plugin.video.repubblicaitaliana" name="RepubblicaItaliana" version="1.0.0" provider-name="Testato">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="inputstream.adaptive"/>
-    <import addon="plugin.video.youtube"/>
+    <import addon="inputstream.adaptive" version="2.6.7"/>
+    <import addon="plugin.video.youtube" version="6.8.10+matrix.1"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -17,9 +17,8 @@
     <platform>all</platform>
     <license>GPL-3.0-only</license>
     <forum>https://forum.kodi.tv/showthread.php?tid=360944</forum>
-    <website></website>
     <email>speednpower@gmail.com</email>
-    <source>https://github.com/Testato/RepubblicaItaliana</source>
+    <source>https://github.com/Testato/plugin.video.repubblicaitaliana</source>
     <assets>
         <icon>resources/icon.png</icon>
         <fanart>resources/fanart.jpg</fanart>
