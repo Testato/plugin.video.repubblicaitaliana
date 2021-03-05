@@ -11,6 +11,7 @@ sudo apt install kodi-inputstream-adaptive
 1.1.0 (05 Mar 2021)
 - Use of Tubed instead of Youtube
 - Fixed some thumbnails
+- Fixed automatic installation of inputstream.adaptive on Windows
 
 1.0.0 (28 Feb 2021)
 - Upgraded to Kodi19 Matrix
