@@ -2,12 +2,12 @@
 Italian politics - TV and Radio channels
 
 ### Install tips
-On some Linux distros, Kodi comes packaged without the inputstream.adaptive plugin.
-In this case, manually install the missing plugin.
-For example on Ubuntu use the command:
-sudo apt install kodi-inputstream-adaptive
+On some Linux distros, Kodi comes packaged without the inputstream.adaptive plugin. In this case, manually install the missing plugin. For example on Ubuntu use the command: "sudo apt install kodi-inputstream-adaptive"
 
 ### Changelog
+1.2.0 (18 May 2021)
+- Plugin reworked
+
 1.1.0 (05 Mar 2021)
 - Use of Tubed instead of Youtube
 - Fixed some thumbnails
