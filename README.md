@@ -5,6 +5,9 @@ Italian politics - TV and Radio channels
 - You can install this plugin via the official Kodi19 repository
 
 ### Changelog
+2.0.1 (04 Jun 2021)
+- Fix RaiNews24
+
 2.0.0 (20 May 2021)
 - Plugin reworked
 - Removed InputStream Adaptive

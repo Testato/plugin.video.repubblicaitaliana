@@ -128,7 +128,8 @@ def programmi_senato():
 def programmi_tv():
     titolo = 'RaiNews24'
     liStyle = xbmcgui.ListItem(titolo, offscreen=True)
-    link = 'https://rainews1-live.akamaized.net/hls/live/598326/rainews1/rainews1/playlist.m3u8'
+    # link = 'https://rainews1-live.akamaized.net/hls/live/598326/rainews1/rainews1/playlist.m3u8'
+    link = 'https://streamcdnr21-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/playlist_mo.m3u8'
     thumb = 'https://www.rainews.it/dl/components/img/svg/RaiNewsBarra-logo.png'
     liStyle.setArt({'thumb': thumb, 'fanart': G.FANART_PATH})
     liStyle.setInfo('video', {})
