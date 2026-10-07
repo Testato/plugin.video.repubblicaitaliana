@@ -2,9 +2,14 @@
 Italian politics - TV and Radio channels
 
 ### Install tips
-- You can install this plugin via the official Kodi20 repository
+- You can install this plugin via the official Kodi repository
 
 ### Changelog
+2.3.0 (04 Ott 2026)
+- Added new channels
+- Fixed some channels
+- Minor fix
+
 2.2.0 (19 Feb 2023)
 - Use of Youtube instead of Tubed
 - Minor fix

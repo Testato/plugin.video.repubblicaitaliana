@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.repubblicaitaliana" name="RepubblicaItaliana" version="2.2.0" provider-name="Testato">
+<addon id="plugin.video.repubblicaitaliana" name="RepubblicaItaliana" version="2.3.0" provider-name="Testato">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="inputstream.adaptive" version="0.0.0"/>
@@ -24,7 +24,12 @@
         <icon>resources/icon.png</icon>
         <fanart>resources/fanart.jpg</fanart>
     </assets>
-    <news>2.2.0 (19 Feb 2023)
+    <news>2.3.0 (04 Ott 2026)
+- Added new channels
+- Fixed some channels
+- Minor fix
+
+2.2.0 (19 Feb 2023)
 - Use of Youtube instead of Tubed
 - Minor fix
 
@@ -32,12 +37,6 @@
 - New Camera channel with subtitles
 - Fix all TV and Radio channels
 - Reintroduced InputStream Adaptive
-
-2.0.0 (20 May 2021)
-- Plugin reworked
-- Removed InputStream Adaptive
-- Fix Camera Assemblea
-- Fix TgCom24 on Linux
     </news>
   </extension>
 </addon>
