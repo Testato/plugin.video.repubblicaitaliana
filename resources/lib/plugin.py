@@ -261,11 +261,11 @@ def programmi_radio():
     for titolo, link, thumb in canali:
         li = xbmcgui.ListItem(titolo, offscreen=True)
         li.setArt({'thumb': thumb, 'fanart': G.FANART_PATH})
-        li.setInfo('video', {'title': titolo})   # <-- 'video' invece di 'music'
+        li.setInfo('video', {'title': titolo})
         li.setProperty('isPlayable', 'true')
         items.append((link, li, False))
 
-    xbmcplugin.setContent(G.PLUGIN_HANDLE, 'episodes')  # <-- aggiunto
+    xbmcplugin.setContent(G.PLUGIN_HANDLE, 'episodes')
     xbmcplugin.addDirectoryItems(handle=G.PLUGIN_HANDLE, items=items, totalItems=len(items))
     xbmcplugin.endOfDirectory(handle=G.PLUGIN_HANDLE, succeeded=True)
 
