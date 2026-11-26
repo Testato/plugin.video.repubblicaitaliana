@@ -1,0 +1,11 @@
+# Exclude Git/GitHub configuration files from release ZIPs and Kodi PRs
+.gitignore export-ignore
+.gitattributes export-ignore
+.github export-ignore
+.editorconfig export-ignore
+
+# Exclude future test folders and development tool configs
+.flake8 export-ignore
+.pylintrc export-ignore
+pyproject.toml export-ignore
+tests export-ignore
